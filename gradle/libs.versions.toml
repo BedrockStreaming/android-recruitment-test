@@ -16,8 +16,10 @@ appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "a
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
 koin-core = "io.insert-koin:koin-core:3.4.2"
 koin-android = "io.insert-koin:koin-android:3.4.2"
+kotlinx-serialization-json = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1"
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
