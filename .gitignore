@@ -1,0 +1,33 @@
+# built application files
+*.apk
+
+# generated files
+/build
+manifest-merger-release-report.txt
+
+# Local configuration file (sdk path, etc)
+/local.properties
+
+# OS X thumbnail db
+.DS_Store
+Thumbs.db
+
+# IDEA/Android Studio project files, because
+# the project can be imported from settings.gradle
+/.idea/*
+!/.idea/jsonSchemas.xml
+*.iml
+
+# Gradle cache
+.gradle
+
+# Captures
+/captures
+
+# YARN/NPM dependencies
+node_modules/
+
+# Release
+.releaserc.json
+
+.idea/
