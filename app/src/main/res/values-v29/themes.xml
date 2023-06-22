@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.BRSuper" parent="Theme.V29.BRSuper" />
+
+    <style name="Theme.V29.BRSuper" parent="Theme.Base.BRSuper">
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+</resources>
