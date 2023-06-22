@@ -14,5 +14,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "BR Super"
+
 include(":app")
  
