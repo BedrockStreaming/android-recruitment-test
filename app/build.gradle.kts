@@ -37,6 +37,8 @@ android {
 dependencies {
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
+    implementation(libs.koin.android)
+    implementation(libs.koin.core)
     implementation(libs.material)
 
     testImplementation(libs.junit)

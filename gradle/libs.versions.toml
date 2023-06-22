@@ -12,8 +12,10 @@ material = "1.9.0"
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
+koin-core = "io.insert-koin:koin-core:3.4.2"
+koin-android = "io.insert-koin:koin-android:3.4.2"
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [plugins]
