@@ -1,5 +1,6 @@
 package com.bedrockstreaming.brsuper.feature.list.presentation
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -27,7 +28,8 @@ fun ListScreenContents(
 ) {
     LazyColumn(
         modifier = modifier,
-        contentPadding = insets
+        contentPadding = insets,
+        verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         items(
             items = heroes,

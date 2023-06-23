@@ -54,6 +54,8 @@ dependencies {
     implementation(libs.androidx.compose.material3.core)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.coil.core)
+    implementation(libs.coil.compose)
     implementation(libs.koin.android)
     implementation(libs.koin.compose)
     implementation(libs.koin.core)

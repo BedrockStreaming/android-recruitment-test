@@ -1,6 +1,5 @@
 package com.bedrockstreaming.brsuper.feature.list.domain
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bedrockstreaming.brsuper.feature.component.hero.domain.GetHeroListUseCase
@@ -31,8 +30,6 @@ class HeroListViewModel(
                     heroes = getHeroList()
                 )
             )
-
-            Log.i("HeroListViewModel", "New state: ${_state.value}")
         }
     }
 }
