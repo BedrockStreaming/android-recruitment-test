@@ -47,7 +47,7 @@ class HeroListViewModel(
                 }
             }
 
-            withContext(Dispatchers.Default) {
+            withContext(Dispatchers.Main) {
                 _state.update { state ->
                     when (state) {
                         is State.Loading -> state
