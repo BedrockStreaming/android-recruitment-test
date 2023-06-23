@@ -1,5 +1,6 @@
 package com.bedrockstreaming.brsuper.feature.list.presentation
 
+import android.content.res.Configuration
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -21,6 +22,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
+import com.bedrockstreaming.brsuper.PreviewMaterialTheme
+import com.bedrockstreaming.brsuper.R
+import com.bedrockstreaming.brsuper.debugPlaceholder
 import com.bedrockstreaming.brsuper.feature.component.hero.domain.model.Hero
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -43,13 +47,14 @@ fun HeroListItem(
                 model = ImageRequest.Builder(LocalContext.current)
                     .data(hero.imageUrl)
                     .crossfade(true)
+                    .debugPlaceholder(R.drawable.item_preview_placeholder)
                     .build(),
                 contentDescription = null
             )
 
             Surface(
                 modifier = Modifier.fillMaxSize(),
-                color = MaterialTheme.colorScheme.surface.copy(alpha = 0.5f),
+                color = MaterialTheme.colorScheme.surface.copy(alpha = 0.7f),
             ) {
                 Column(
                     modifier = Modifier.fillMaxSize(),
@@ -67,13 +72,16 @@ fun HeroListItem(
 }
 
 @Preview
+@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
 fun HeroListItemPreview() {
-    HeroListItem(
-        hero = Hero(
-            id = "1",
-            name = "A-Bomb",
-            imageUrl = ""
+    PreviewMaterialTheme {
+        HeroListItem(
+            hero = Hero(
+                id = "1",
+                name = "A-Bomb",
+                imageUrl = ""
+            )
         )
-    )
+    }
 }
