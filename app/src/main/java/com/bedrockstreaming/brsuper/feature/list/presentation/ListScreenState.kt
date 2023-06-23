@@ -31,7 +31,9 @@ fun ListScreenState(
 
         is HeroListViewModel.State.Content -> {
             ListScreenContents(
-                heroes = currentState.heroes,
+                heroes = currentState.filteredHeroes,
+                filter = currentState.filter,
+                onFilterChange = viewModel::updateFilter,
                 insets = insets
             )
         }
