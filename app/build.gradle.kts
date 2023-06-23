@@ -33,11 +33,24 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.6"
+    }
 }
 
 dependencies {
+    implementation(platform(libs.androidx.compose.bom))
+
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.compose.icons)
+    implementation(libs.androidx.compose.material3.core)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.koin.android)
@@ -49,6 +62,9 @@ dependencies {
     implementation(libs.ktor.client.content.negotiation)
     implementation(libs.ktor.client.serialization.json)
     implementation(libs.material)
+
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    debugImplementation(libs.androidx.compose.ui.tooling.core)
 
     testImplementation(libs.junit)
 
