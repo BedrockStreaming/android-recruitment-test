@@ -1,4 +1,4 @@
-package com.bedrockstreaming.brsuper.feature.component.hero.domain.model
+package com.bedrockstreaming.brsuper.component.hero.domain.model
 
 data class Hero(
     val id: String,

@@ -1,4 +1,4 @@
-package com.bedrockstreaming.brsuper.feature.component.hero.data.model
+package com.bedrockstreaming.brsuper.component.hero.data.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

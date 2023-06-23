@@ -1,7 +1,7 @@
-package com.bedrockstreaming.brsuper.feature.component.hero.domain
+package com.bedrockstreaming.brsuper.component.hero.domain
 
-import com.bedrockstreaming.brsuper.feature.component.hero.data.HeroApi
-import com.bedrockstreaming.brsuper.feature.component.hero.domain.model.Hero
+import com.bedrockstreaming.brsuper.component.hero.data.HeroApi
+import com.bedrockstreaming.brsuper.component.hero.domain.model.Hero
 
 class HeroRepository(
     private val heroApi: HeroApi,

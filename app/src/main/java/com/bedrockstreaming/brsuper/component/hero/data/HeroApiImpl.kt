@@ -1,6 +1,6 @@
-package com.bedrockstreaming.brsuper.feature.component.hero.data
+package com.bedrockstreaming.brsuper.component.hero.data
 
-import com.bedrockstreaming.brsuper.feature.component.hero.data.model.Hero
+import com.bedrockstreaming.brsuper.component.hero.data.model.Hero
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.plugins.defaultRequest
