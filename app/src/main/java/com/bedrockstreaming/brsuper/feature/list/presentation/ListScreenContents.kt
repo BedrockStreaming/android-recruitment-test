@@ -6,7 +6,9 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Clear
 import androidx.compose.material3.Icon
@@ -25,11 +27,13 @@ fun ListScreenContents(
     modifier: Modifier = Modifier,
     insets: PaddingValues = PaddingValues(),
     heroes: List<Hero>,
+    listState: LazyListState = rememberLazyListState(),
     filter: String = "",
     onFilterChange: (String) -> Unit = {},
 ) {
     LazyColumn(
         modifier = modifier,
+        state = listState,
         contentPadding = insets,
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
@@ -39,6 +43,7 @@ fun ListScreenContents(
                     .padding(horizontal = 12.dp)
                     .padding(bottom = 8.dp)
                     .fillMaxWidth(),
+                singleLine = true,
                 placeholder = { Text("Search for a hero…") },
                 trailingIcon = {
                     if (filter.isNotEmpty()) {

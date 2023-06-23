@@ -2,6 +2,8 @@ package com.bedrockstreaming.brsuper.feature.list.presentation
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyListState
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -14,6 +16,7 @@ import org.koin.compose.koinInject
 fun ListScreenState(
     modifier: Modifier,
     viewModel: HeroListViewModel = koinInject(),
+    listState: LazyListState = rememberLazyListState(),
     insets: PaddingValues = PaddingValues(),
 ) {
     val state by viewModel.state.collectAsState()
@@ -32,6 +35,7 @@ fun ListScreenState(
         is HeroListViewModel.State.Content -> {
             ListScreenContents(
                 heroes = currentState.filteredHeroes,
+                listState = listState,
                 filter = currentState.filter,
                 onFilterChange = viewModel::updateFilter,
                 insets = insets
