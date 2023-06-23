@@ -1,13 +1,16 @@
 package com.bedrockstreaming.brsuper.feature.list.presentation
 
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -26,27 +29,34 @@ fun HeroListItem(
     onClick: () -> Unit = {},
 ) {
     Card(
-        modifier = modifier,
+        modifier = modifier.height(64.dp),
         onClick = onClick,
     ) {
-        Row(
-            modifier = modifier.padding(8.dp),
-            horizontalArrangement = Arrangement.spacedBy(16.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
+        Box {
             AsyncImage(
                 modifier = Modifier
-                    .width(64.dp)
+                    .fillMaxWidth()
                     .aspectRatio(2f / 3f)
                     .clip(MaterialTheme.shapes.medium),
                 model = hero.imageUrl,
                 contentDescription = null
             )
 
-            Text(
-                text = hero.name,
-                style = MaterialTheme.typography.titleMedium
-            )
+            Surface(
+                modifier = Modifier.fillMaxSize(),
+                color = MaterialTheme.colorScheme.surface.copy(alpha = 0.5f),
+            ) {
+                Column(
+                    modifier = Modifier.fillMaxSize(),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = hero.name,
+                        style = MaterialTheme.typography.titleLarge
+                    )
+                }
+            }
         }
     }
 }
