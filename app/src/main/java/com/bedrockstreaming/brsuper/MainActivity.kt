@@ -1,19 +1,22 @@
 package com.bedrockstreaming.brsuper
 
 import android.os.Bundle
+import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
-import com.bedrockstreaming.brsuper.feature.list.domain.HeroListViewModel
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import com.bedrockstreaming.brsuper.feature.list.presentation.ListScreen
+import com.google.accompanist.themeadapter.material3.Mdc3Theme
 
 class MainActivity : AppCompatActivity() {
-
-    private val viewModel: HeroListViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
-        viewModel.load()
+        setContent {
+            Mdc3Theme {
+                ListScreen()
+            }
+        }
     }
 }

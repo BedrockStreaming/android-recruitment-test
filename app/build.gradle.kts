@@ -47,6 +47,7 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
 
     implementation(libs.core.ktx)
+    implementation(libs.accompanist.material3)
     implementation(libs.appcompat)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.icons)
@@ -54,6 +55,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.koin.android)
+    implementation(libs.koin.compose)
     implementation(libs.koin.core)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.ktor.client.core)

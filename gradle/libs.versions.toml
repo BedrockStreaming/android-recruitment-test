@@ -11,6 +11,7 @@ lifecycle = "2.6.1"
 material = "1.9.0"
 
 [libraries]
+accompanist-material3 = "com.google.accompanist:accompanist-themeadapter-material3:0.31.4-beta"
 androidx-compose-bom = "androidx.compose:compose-bom:2023.06.00"
 androidx-compose-icons = { module = "androidx.compose.material:material-icons-core" }
 androidx-compose-material3-core = { module = "androidx.compose.material3:material3" }
@@ -25,6 +26,7 @@ androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
 koin-core = "io.insert-koin:koin-core:3.4.2"
+koin-compose = "io.insert-koin:koin-androidx-compose:3.4.5"
 koin-android = "io.insert-koin:koin-android:3.4.2"
 kotlinx-serialization-json = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1"
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
