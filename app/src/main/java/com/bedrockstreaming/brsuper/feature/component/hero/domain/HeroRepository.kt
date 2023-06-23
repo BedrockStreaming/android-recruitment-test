@@ -11,7 +11,7 @@ class HeroRepository(
             Hero(
                 id = hero.id,
                 name = hero.name,
-                imageUrl = hero.images.small
+                imageUrl = hero.images.medium
             )
         }
     }

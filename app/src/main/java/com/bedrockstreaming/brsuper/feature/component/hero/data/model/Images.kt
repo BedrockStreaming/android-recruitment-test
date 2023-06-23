@@ -6,7 +6,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Images(
     @SerialName("xs")
-    val extraSmall: String,
+    val thumbnail: String,
     @SerialName("sm")
     val small: String,
     @SerialName("md")
