@@ -30,6 +30,7 @@ fun ListScreenContents(
     listState: LazyListState = rememberLazyListState(),
     filter: String = "",
     onFilterChange: (String) -> Unit = {},
+    onItemClick: (String) -> Unit = {},
 ) {
     LazyColumn(
         modifier = modifier,
@@ -68,6 +69,7 @@ fun ListScreenContents(
                 modifier = Modifier
                     .padding(horizontal = 12.dp)
                     .fillMaxWidth(),
+                onClick = { onItemClick(hero.id) },
                 hero = hero
             )
         }

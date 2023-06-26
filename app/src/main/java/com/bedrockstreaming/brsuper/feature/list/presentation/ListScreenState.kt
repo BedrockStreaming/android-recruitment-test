@@ -17,6 +17,7 @@ fun ListScreenState(
     modifier: Modifier,
     viewModel: HeroListViewModel = koinInject(),
     listState: LazyListState = rememberLazyListState(),
+    onItemClick: (String) -> Unit = {},
     insets: PaddingValues = PaddingValues(),
 ) {
     val state by viewModel.state.collectAsState()
@@ -34,10 +35,12 @@ fun ListScreenState(
 
         is HeroListViewModel.State.Content -> {
             ListScreenContents(
+                modifier = modifier,
                 heroes = currentState.filteredHeroes,
                 listState = listState,
                 filter = currentState.filter,
                 onFilterChange = viewModel::updateFilter,
+                onItemClick = onItemClick,
                 insets = insets
             )
         }

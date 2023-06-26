@@ -16,6 +16,7 @@ import kotlinx.coroutines.launch
 @Composable
 fun ListScreen(
     modifier: Modifier = Modifier,
+    onItemClick: (String) -> Unit = {},
 ) {
     val listState = rememberLazyListState()
     val scope = rememberCoroutineScope()
@@ -35,6 +36,7 @@ fun ListScreen(
         ListScreenState(
             modifier = modifier,
             listState = listState,
+            onItemClick = onItemClick,
             insets = insets
         )
     }
