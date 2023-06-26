@@ -41,7 +41,8 @@ fun MainNavigation(
                         }
 
                         DetailsScreen(
-                            id = currentDestination.id
+                            id = currentDestination.id,
+                            onBackPress = viewModel::onNavigateUp
                         )
                     }
                 }
