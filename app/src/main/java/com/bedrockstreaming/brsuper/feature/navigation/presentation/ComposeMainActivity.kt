@@ -1,4 +1,4 @@
-package com.bedrockstreaming.brsuper
+package com.bedrockstreaming.brsuper.feature.navigation.presentation
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -6,10 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
 import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.core.view.WindowCompat
-import com.bedrockstreaming.brsuper.feature.navigation.presentation.MainNavigation
 import com.google.accompanist.themeadapter.material3.Mdc3Theme
 
-class MainActivity : AppCompatActivity() {
+class ComposeMainActivity : AppCompatActivity() {
 
     @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContent {
             Mdc3Theme {
                 MainNavigation(
-                    windowSizeClass = calculateWindowSizeClass(this@MainActivity)
+                    windowSizeClass = calculateWindowSizeClass(this@ComposeMainActivity)
                 )
             }
         }

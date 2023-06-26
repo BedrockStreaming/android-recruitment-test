@@ -17,8 +17,17 @@ class DetailsFragment : Fragment() {
 
     private var binding: FragmentDetailsBinding? = null
 
+    companion object {
+        fun newInstance(id: String) = DetailsFragment().apply {
+            arguments = Bundle().apply {
+                putString("id", id)
+            }
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         lifecycleScope.launch {
             viewModel.state.collect { state ->
                 when (state) {
@@ -40,6 +49,12 @@ class DetailsFragment : Fragment() {
                         }
                     }
                 }
+            }
+        }
+
+        if (savedInstanceState == null) {
+            arguments?.getString("id")?.let { id ->
+                viewModel.load(id)
             }
         }
     }
