@@ -1,4 +1,4 @@
-package com.bedrockstreaming.brsuper.feature.home.presentation
+package com.bedrockstreaming.brsuper.feature.navigation.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

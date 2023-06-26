@@ -1,4 +1,4 @@
-package com.bedrockstreaming.brsuper.component.hero.domain.model
+package com.bedrockstreaming.brsuper.feature.detail.domain.model
 
 data class Biography(
     val fullName: String,

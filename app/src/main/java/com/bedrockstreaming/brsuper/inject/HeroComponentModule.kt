@@ -1,10 +1,5 @@
-package com.bedrockstreaming.brsuper.component.hero.inject
+package com.bedrockstreaming.brsuper.inject
 
-import com.bedrockstreaming.brsuper.component.hero.data.HeroApi
-import com.bedrockstreaming.brsuper.component.hero.data.HeroApiImpl
-import com.bedrockstreaming.brsuper.component.hero.domain.GetHeroBiographyUseCase
-import com.bedrockstreaming.brsuper.component.hero.domain.GetHeroListUseCase
-import com.bedrockstreaming.brsuper.component.hero.domain.HeroRepository
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
@@ -16,7 +11,7 @@ import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 import org.koin.dsl.module
 
-val HeroComponentModule = module {
+val NetworkModule = module {
     single {
         HttpClient(CIO) {
             expectSuccess = true
@@ -37,8 +32,4 @@ val HeroComponentModule = module {
         }
     }
 
-    single<HeroApi> { HeroApiImpl(get()) }
-    single { HeroRepository(get()) }
-    single { GetHeroListUseCase(get()) }
-    single { GetHeroBiographyUseCase(get()) }
 }

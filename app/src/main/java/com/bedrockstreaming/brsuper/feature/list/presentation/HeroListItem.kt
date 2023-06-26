@@ -25,7 +25,7 @@ import coil.request.ImageRequest
 import com.bedrockstreaming.brsuper.PreviewMaterialTheme
 import com.bedrockstreaming.brsuper.R
 import com.bedrockstreaming.brsuper.debugPlaceholder
-import com.bedrockstreaming.brsuper.component.hero.domain.model.Hero
+import com.bedrockstreaming.brsuper.feature.list.domain.model.Hero
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

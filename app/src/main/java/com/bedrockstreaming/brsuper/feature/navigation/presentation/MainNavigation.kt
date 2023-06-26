@@ -1,4 +1,4 @@
-package com.bedrockstreaming.brsuper.feature.home.presentation
+package com.bedrockstreaming.brsuper.feature.navigation.presentation
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.Crossfade

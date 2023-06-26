@@ -2,8 +2,8 @@ package com.bedrockstreaming.brsuper.feature.detail.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.bedrockstreaming.brsuper.component.hero.domain.GetHeroBiographyUseCase
-import com.bedrockstreaming.brsuper.component.hero.domain.model.Biography
+import com.bedrockstreaming.brsuper.feature.detail.domain.GetHeroBiographyUseCase
+import com.bedrockstreaming.brsuper.feature.detail.domain.model.Biography
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class DetailsViewModel(
-    private val getHeroBiography: GetHeroBiographyUseCase,
+    private val getHeroBiography: GetHeroBiographyUseCase
 ) : ViewModel() {
 
     sealed class State {

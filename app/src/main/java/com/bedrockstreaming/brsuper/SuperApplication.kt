@@ -1,10 +1,10 @@
 package com.bedrockstreaming.brsuper
 
 import android.app.Application
-import com.bedrockstreaming.brsuper.component.hero.inject.HeroComponentModule
-import com.bedrockstreaming.brsuper.feature.detail.inject.HeroDetailsModule
-import com.bedrockstreaming.brsuper.feature.home.inject.HomeFeatureModule
-import com.bedrockstreaming.brsuper.feature.list.inject.HeroListFeatureModule
+import com.bedrockstreaming.brsuper.inject.NetworkModule
+import com.bedrockstreaming.brsuper.feature.detail.inject.DetailsModule
+import com.bedrockstreaming.brsuper.feature.navigation.inject.NavigationModule
+import com.bedrockstreaming.brsuper.feature.list.inject.ListModule
 import com.google.android.material.color.DynamicColors
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -20,10 +20,10 @@ class SuperApplication : Application() {
             androidLogger()
             androidContext(this@SuperApplication)
             modules(
-                HomeFeatureModule,
-                HeroComponentModule,
-                HeroListFeatureModule,
-                HeroDetailsModule,
+                NetworkModule,
+                NavigationModule,
+                ListModule,
+                DetailsModule
             )
         }
     }

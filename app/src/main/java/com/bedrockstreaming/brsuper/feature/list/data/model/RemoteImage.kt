@@ -1,10 +1,10 @@
-package com.bedrockstreaming.brsuper.component.hero.data.model
+package com.bedrockstreaming.brsuper.feature.list.data.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Images(
+data class RemoteImage(
     @SerialName("xs")
     val thumbnail: String,
     @SerialName("sm")
@@ -12,5 +12,5 @@ data class Images(
     @SerialName("md")
     val medium: String,
     @SerialName("lg")
-    val large: String,
+    val large: String
 )
