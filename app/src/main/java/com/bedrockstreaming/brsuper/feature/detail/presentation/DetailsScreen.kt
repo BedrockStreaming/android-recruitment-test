@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidViewBinding
 import com.bedrockstreaming.brsuper.databinding.ContainerDetailsBinding
+import com.bedrockstreaming.brsuper.feature.detail.presentation.legacy.LegacyDetailsFragment
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -47,7 +48,7 @@ fun DetailsScreen(
         ) {
             AndroidViewBinding(ContainerDetailsBinding::inflate) {
                 fragmentContainerView
-                    .getFragment<DetailsFragment>()
+                    .getFragment<LegacyDetailsFragment>()
                     .loadHeroWithId(id)
             }
         }

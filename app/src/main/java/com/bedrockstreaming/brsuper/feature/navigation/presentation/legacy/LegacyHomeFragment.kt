@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.bedrockstreaming.brsuper.R
 import com.bedrockstreaming.brsuper.databinding.FragmentLegacyHomeBinding
-import com.bedrockstreaming.brsuper.feature.detail.presentation.DetailsFragment
+import com.bedrockstreaming.brsuper.feature.detail.presentation.legacy.LegacyDetailsFragment
 import com.bedrockstreaming.brsuper.feature.list.presentation.legacy.LegacyListFragment
 import com.bedrockstreaming.brsuper.feature.navigation.presentation.MainNavigationViewModel
 import kotlinx.coroutines.launch
@@ -42,7 +42,7 @@ class LegacyHomeFragment : Fragment(), LegacyNavigator {
                         childFragmentManager.beginTransaction()
                             .replace(
                                 R.id.fragmentContainerView_homeFragment,
-                                DetailsFragment.newInstance(state.id)
+                                LegacyDetailsFragment.newInstance(state.id)
                             )
                             .commit()
                     }
