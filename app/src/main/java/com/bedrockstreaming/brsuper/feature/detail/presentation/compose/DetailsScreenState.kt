@@ -1,4 +1,4 @@
-package com.bedrockstreaming.brsuper.feature.detail.presentation
+package com.bedrockstreaming.brsuper.feature.detail.presentation.compose
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
@@ -8,7 +8,8 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.bedrockstreaming.brsuper.feature.list.presentation.Loader
+import com.bedrockstreaming.brsuper.Loader
+import com.bedrockstreaming.brsuper.feature.detail.presentation.DetailsViewModel
 import org.koin.androidx.compose.koinViewModel
 
 @Composable

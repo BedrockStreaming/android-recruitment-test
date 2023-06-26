@@ -1,4 +1,4 @@
-package com.bedrockstreaming.brsuper.feature.navigation.presentation
+package com.bedrockstreaming.brsuper.feature.navigation.presentation.compose
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.Crossfade
@@ -8,9 +8,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import com.bedrockstreaming.brsuper.feature.detail.presentation.DetailsScreen
-import com.bedrockstreaming.brsuper.feature.list.presentation.Empty
-import com.bedrockstreaming.brsuper.feature.list.presentation.ListScreen
+import com.bedrockstreaming.brsuper.Empty
+import com.bedrockstreaming.brsuper.feature.detail.presentation.compose.DetailsScreen
+import com.bedrockstreaming.brsuper.feature.list.presentation.compose.ListScreen
+import com.bedrockstreaming.brsuper.feature.navigation.presentation.MainNavigationViewModel
 import com.microsoft.device.dualscreen.twopanelayout.TwoPaneLayout
 import org.koin.androidx.compose.koinViewModel
 

@@ -1,4 +1,4 @@
-package com.bedrockstreaming.brsuper.feature.detail.presentation
+package com.bedrockstreaming.brsuper.feature.detail.presentation.compose
 
 import android.content.res.Configuration
 import androidx.compose.foundation.layout.Arrangement

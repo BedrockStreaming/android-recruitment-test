@@ -1,7 +1,8 @@
-package com.bedrockstreaming.brsuper.feature.list.domain
+package com.bedrockstreaming.brsuper.feature.list.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.bedrockstreaming.brsuper.feature.list.domain.GetHeroListUseCase
 import com.bedrockstreaming.brsuper.feature.list.domain.model.Hero
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow

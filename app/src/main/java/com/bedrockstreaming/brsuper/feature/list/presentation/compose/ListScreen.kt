@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.bedrockstreaming.brsuper.feature.list.presentation
+package com.bedrockstreaming.brsuper.feature.list.presentation.compose
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.lazy.rememberLazyListState

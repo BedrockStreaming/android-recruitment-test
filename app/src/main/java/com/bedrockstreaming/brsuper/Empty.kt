@@ -1,4 +1,4 @@
-package com.bedrockstreaming.brsuper.feature.list.presentation
+package com.bedrockstreaming.brsuper
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

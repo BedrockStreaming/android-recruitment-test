@@ -1,4 +1,4 @@
-package com.bedrockstreaming.brsuper.feature.detail.presentation
+package com.bedrockstreaming.brsuper.feature.detail.presentation.compose
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.MaterialTheme

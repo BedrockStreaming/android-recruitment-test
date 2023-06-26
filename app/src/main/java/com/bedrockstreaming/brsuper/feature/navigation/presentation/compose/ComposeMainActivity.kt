@@ -1,4 +1,4 @@
-package com.bedrockstreaming.brsuper.feature.navigation.presentation
+package com.bedrockstreaming.brsuper.feature.navigation.presentation.compose
 
 import android.os.Bundle
 import androidx.activity.compose.setContent

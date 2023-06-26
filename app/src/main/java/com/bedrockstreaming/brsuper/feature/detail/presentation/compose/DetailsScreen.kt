@@ -1,4 +1,4 @@
-package com.bedrockstreaming.brsuper.feature.detail.presentation
+package com.bedrockstreaming.brsuper.feature.detail.presentation.compose
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
