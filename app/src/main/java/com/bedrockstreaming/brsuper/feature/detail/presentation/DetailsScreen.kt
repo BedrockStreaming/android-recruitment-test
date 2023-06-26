@@ -13,6 +13,8 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.viewinterop.AndroidViewBinding
+import com.bedrockstreaming.brsuper.databinding.ContainerDetailsBinding
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -43,7 +45,11 @@ fun DetailsScreen(
                 .padding(insets)
                 .padding(16.dp)
         ) {
-            Text("Details screen for $id")
+            AndroidViewBinding(ContainerDetailsBinding::inflate) {
+                fragmentContainerView
+                    .getFragment<DetailsFragment>()
+                    .loadHeroWithId(id)
+            }
         }
     }
 }

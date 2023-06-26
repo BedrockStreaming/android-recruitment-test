@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class DetailsViewModel(
-    private val getHeroBiography: GetHeroBiographyUseCase
+    private val getHeroBiography: GetHeroBiographyUseCase,
 ) : ViewModel() {
 
     sealed class State {
@@ -40,5 +40,4 @@ class DetailsViewModel(
     private suspend fun heavyOperation() {
         delay(2000L)
     }
-
 }
