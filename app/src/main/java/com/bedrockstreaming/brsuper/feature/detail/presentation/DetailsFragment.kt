@@ -31,9 +31,9 @@ class DetailsFragment : Fragment() {
 
                     is DetailsViewModel.State.Content -> {
                         binding?.apply {
-                            textViewFullName.text = state.biography.fullName
-                            textViewAlignment.text = state.biography.alignment
-                            textViewAlterEgos.text = state.biography.alterEgos
+                            textViewFullName.text = state.biography.fullName.ifBlank { "-" }
+                            textViewAlignment.text = state.biography.alignment.ifBlank { "-" }
+                            textViewAlterEgos.text = state.biography.alterEgos.ifBlank { "-" }
 
                             groupLoading.isVisible = false
                             groupContent.isVisible = true
