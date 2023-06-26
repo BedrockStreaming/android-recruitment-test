@@ -53,6 +53,7 @@ dependencies {
     implementation(libs.androidx.compose.icons)
     implementation(libs.androidx.compose.material3.core)
     implementation(libs.androidx.compose.material3.sizeClass)
+    implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.coil.core)
