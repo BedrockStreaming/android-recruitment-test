@@ -7,8 +7,9 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import com.bedrockstreaming.brsuper.databinding.FragmentDetailsBinding
+import com.bedrockstreaming.brsuper.databinding.FragmentLegacyDetailsBinding
 import com.bedrockstreaming.brsuper.feature.detail.presentation.DetailsViewModel
+import com.bedrockstreaming.brsuper.feature.navigation.presentation.legacy.navigator
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -16,7 +17,7 @@ class LegacyDetailsFragment : Fragment() {
 
     private val viewModel: DetailsViewModel by viewModel()
 
-    private var binding: FragmentDetailsBinding? = null
+    private var binding: FragmentLegacyDetailsBinding? = null
 
     companion object {
         fun newInstance(id: String) = LegacyDetailsFragment().apply {
@@ -61,8 +62,13 @@ class LegacyDetailsFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return FragmentDetailsBinding.inflate(inflater, container, false)
+        return FragmentLegacyDetailsBinding.inflate(inflater, container, false)
             .also { binding -> this.binding = binding }
+            .also { binding ->
+                binding.topAppBarDetails.setNavigationOnClickListener {
+                    navigator.navigateUp()
+                }
+            }
             .root
     }
 
