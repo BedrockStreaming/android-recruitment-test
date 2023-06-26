@@ -10,12 +10,12 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import com.bedrockstreaming.brsuper.feature.list.domain.HeroListViewModel
-import org.koin.compose.koinInject
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun ListScreenState(
     modifier: Modifier,
-    viewModel: HeroListViewModel = koinInject(),
+    viewModel: HeroListViewModel = koinViewModel(),
     listState: LazyListState = rememberLazyListState(),
     onItemClick: (String) -> Unit = {},
     insets: PaddingValues = PaddingValues(),

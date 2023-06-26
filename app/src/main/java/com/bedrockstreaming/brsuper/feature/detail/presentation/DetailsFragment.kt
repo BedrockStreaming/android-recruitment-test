@@ -9,11 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.bedrockstreaming.brsuper.databinding.FragmentDetailsBinding
 import kotlinx.coroutines.launch
-import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DetailsFragment : Fragment() {
 
-    private val viewModel: DetailsViewModel by inject()
+    private val viewModel: DetailsViewModel by viewModel()
 
     private var binding: FragmentDetailsBinding? = null
 

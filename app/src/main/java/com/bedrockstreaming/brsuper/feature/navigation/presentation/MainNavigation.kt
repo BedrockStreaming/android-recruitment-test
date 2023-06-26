@@ -12,13 +12,13 @@ import com.bedrockstreaming.brsuper.feature.detail.presentation.DetailsScreen
 import com.bedrockstreaming.brsuper.feature.list.presentation.Empty
 import com.bedrockstreaming.brsuper.feature.list.presentation.ListScreen
 import com.microsoft.device.dualscreen.twopanelayout.TwoPaneLayout
-import org.koin.compose.koinInject
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun MainNavigation(
     modifier: Modifier = Modifier,
     windowSizeClass: WindowSizeClass,
-    viewModel: MainNavigationViewModel = koinInject(),
+    viewModel: MainNavigationViewModel = koinViewModel(),
 ) {
     val destination by viewModel.currentDestination.collectAsState()
     when (windowSizeClass.widthSizeClass) {
