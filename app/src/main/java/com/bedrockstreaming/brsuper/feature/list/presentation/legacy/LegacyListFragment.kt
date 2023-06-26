@@ -12,8 +12,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bedrockstreaming.brsuper.databinding.FragmentLegacyListBinding
-import com.bedrockstreaming.brsuper.feature.navigation.presentation.legacy.navigator
 import com.bedrockstreaming.brsuper.feature.list.domain.HeroListViewModel
+import com.bedrockstreaming.brsuper.feature.navigation.presentation.legacy.navigator
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
