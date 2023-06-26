@@ -26,7 +26,7 @@ fun DetailsScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(text = "Details screen for $id") },
+                title = { Text(text = "Details") },
                 navigationIcon = {
                     if (onBackPress != null) {
                         IconButton(onClick = onBackPress) {
