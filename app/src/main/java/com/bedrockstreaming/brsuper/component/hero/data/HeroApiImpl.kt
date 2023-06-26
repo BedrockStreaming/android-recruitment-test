@@ -1,5 +1,6 @@
 package com.bedrockstreaming.brsuper.component.hero.data
 
+import com.bedrockstreaming.brsuper.component.hero.data.model.Biography
 import com.bedrockstreaming.brsuper.component.hero.data.model.Hero
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
@@ -8,7 +9,7 @@ import io.ktor.client.request.get
 import io.ktor.http.path
 
 class HeroApiImpl(
-    httpClient: HttpClient,
+    httpClient: HttpClient
 ) : HeroApi {
 
     private val client = httpClient.config {
@@ -19,5 +20,9 @@ class HeroApiImpl(
 
     override suspend fun getAll(): List<Hero> {
         return client.get { url { path("all.json") } }.body()
+    }
+
+    override suspend fun getBiography(id: String): Biography {
+        return client.get { url { path("/biography/${id}.json")} }.body()
     }
 }

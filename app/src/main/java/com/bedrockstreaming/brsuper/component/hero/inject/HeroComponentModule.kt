@@ -2,6 +2,7 @@ package com.bedrockstreaming.brsuper.component.hero.inject
 
 import com.bedrockstreaming.brsuper.component.hero.data.HeroApi
 import com.bedrockstreaming.brsuper.component.hero.data.HeroApiImpl
+import com.bedrockstreaming.brsuper.component.hero.domain.GetHeroBiographyUseCase
 import com.bedrockstreaming.brsuper.component.hero.domain.GetHeroListUseCase
 import com.bedrockstreaming.brsuper.component.hero.domain.HeroRepository
 import io.ktor.client.HttpClient
@@ -39,4 +40,5 @@ val HeroComponentModule = module {
     single<HeroApi> { HeroApiImpl(get()) }
     single { HeroRepository(get()) }
     single { GetHeroListUseCase(get()) }
+    single { GetHeroBiographyUseCase(get()) }
 }
