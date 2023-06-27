@@ -72,7 +72,12 @@ class LegacyListFragment : Fragment() {
 
                 ViewCompat.setOnApplyWindowInsetsListener(binding.recyclerViewList) { view, windowInsets ->
                     val insets = windowInsets.getInsets(WindowInsetsCompat.Type.navigationBars())
-                    view.updatePadding(insets.left, insets.top, insets.right, insets.bottom)
+                    view.updatePadding(
+                        left = insets.left + view.paddingLeft,
+                        top = insets.top + view.paddingTop,
+                        right = insets.right + view.paddingRight,
+                        bottom = insets.bottom + view.paddingBottom
+                    )
                     WindowInsetsCompat.CONSUMED
                 }
             }
