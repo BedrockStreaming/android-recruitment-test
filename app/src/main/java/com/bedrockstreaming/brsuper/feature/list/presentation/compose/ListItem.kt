@@ -29,7 +29,7 @@ import com.bedrockstreaming.brsuper.feature.list.domain.model.Hero
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HeroListItem(
+fun ListItem(
     modifier: Modifier = Modifier,
     hero: Hero,
     onClick: () -> Unit = {},
@@ -76,7 +76,7 @@ fun HeroListItem(
 @Composable
 fun HeroListItemPreview() {
     PreviewMaterialTheme {
-        HeroListItem(
+        ListItem(
             hero = Hero(
                 id = "1",
                 name = "A-Bomb",

@@ -65,7 +65,7 @@ fun ListScreenContents(
             items = heroes,
             key = { hero -> hero.id }
         ) { hero ->
-            HeroListItem(
+            ListItem(
                 modifier = Modifier
                     .padding(horizontal = 12.dp)
                     .fillMaxWidth(),
