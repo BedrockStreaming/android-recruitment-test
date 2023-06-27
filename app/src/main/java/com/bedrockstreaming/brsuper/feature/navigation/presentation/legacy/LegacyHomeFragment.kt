@@ -20,7 +20,7 @@ class LegacyHomeFragment : Fragment(), LegacyNavigator {
 
     private var binding: FragmentLegacyHomeBinding? = null
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return FragmentLegacyHomeBinding.inflate(inflater, container, false)
             .also { binding -> this.binding = binding }
             .root
@@ -34,7 +34,10 @@ class LegacyHomeFragment : Fragment(), LegacyNavigator {
                 when (state) {
                     is MainNavigationViewModel.Destination.Home -> {
                         childFragmentManager.beginTransaction()
-                            .replace(R.id.fragmentContainerView_homeFragment, LegacyListFragment.newInstance())
+                            .replace(
+                                R.id.fragmentContainerView_homeFragment,
+                                LegacyListFragment.newInstance()
+                            )
                             .commit()
                     }
 
