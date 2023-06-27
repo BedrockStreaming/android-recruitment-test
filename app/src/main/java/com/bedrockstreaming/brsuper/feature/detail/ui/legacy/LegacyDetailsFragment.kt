@@ -79,7 +79,4 @@ class LegacyDetailsFragment : Fragment() {
             .root
     }
 
-    fun loadHeroWithId(id: String) {
-        viewModel.load(id)
-    }
 }
