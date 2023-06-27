@@ -2,17 +2,17 @@ package com.bedrockstreaming.brsuper.feature.list.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.bedrockstreaming.brsuper.feature.list.domain.FilterHeroesUseCase
 import com.bedrockstreaming.brsuper.feature.list.domain.GetHeroListUseCase
 import com.bedrockstreaming.brsuper.feature.list.domain.model.Hero
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class ListViewModel(
     private val getHeroList: GetHeroListUseCase,
+    private val filterHeroes: FilterHeroesUseCase,
 ) : ViewModel() {
 
     sealed class State {
@@ -47,19 +47,15 @@ class ListViewModel(
                 }
             }
 
-            withContext(Dispatchers.Main) {
-                _state.update { state ->
-                    when (state) {
-                        is State.Loading -> state
-                        is State.Content -> state.copy(
-                            filteredHeroes = state.allHeroes.filter { hero ->
-                                hero.name.contains(
-                                    filter,
-                                    ignoreCase = true
-                                )
-                            }
+            _state.update { state ->
+                when (state) {
+                    is State.Loading -> state
+                    is State.Content -> state.copy(
+                        filteredHeroes = filterHeroes(
+                            filter = filter,
+                            heroes = state.allHeroes
                         )
-                    }
+                    )
                 }
             }
         }
