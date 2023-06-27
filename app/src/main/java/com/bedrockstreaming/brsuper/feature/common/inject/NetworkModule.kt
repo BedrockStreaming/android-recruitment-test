@@ -1,4 +1,4 @@
-package com.bedrockstreaming.brsuper.inject
+package com.bedrockstreaming.brsuper.feature.common.inject
 
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
