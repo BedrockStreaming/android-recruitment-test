@@ -8,12 +8,14 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
 import androidx.core.view.updatePadding
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bedrockstreaming.brsuper.databinding.FragmentLegacyListBinding
 import com.bedrockstreaming.brsuper.feature.list.presentation.HeroListViewModel
 import com.bedrockstreaming.brsuper.feature.navigation.presentation.legacy.navigator
+import com.google.android.material.textfield.TextInputLayout
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -44,6 +46,17 @@ class LegacyListFragment : Fragment() {
                         binding?.apply {
                             (recyclerViewList.adapter as? LegacyListAdapter)?.submitList(state.filteredHeroes)
 
+                            textInputLayoutListSearch.endIconMode =
+                                if (state.filter.isNotBlank()) {
+                                    TextInputLayout.END_ICON_CLEAR_TEXT
+                                } else {
+                                    TextInputLayout.END_ICON_NONE
+                                }
+
+                            if (textInputEditTextListSearch.text.toString() != state.filter) {
+                                textInputEditTextListSearch.setText(state.filter)
+                            }
+
                             progressIndicatorList.isVisible = false
                             recyclerViewList.isVisible = true
                         }
@@ -53,7 +66,7 @@ class LegacyListFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return FragmentLegacyListBinding.inflate(inflater, container, false)
             .also { binding -> this.binding = binding }
             .also { binding ->
@@ -68,6 +81,10 @@ class LegacyListFragment : Fragment() {
                             navigator.navigateToDetails(hero.id)
                         }
                     }
+                }
+
+                binding.textInputEditTextListSearch.addTextChangedListener {
+                    viewModel.updateFilter(it.toString())
                 }
 
                 ViewCompat.setOnApplyWindowInsetsListener(binding.recyclerViewList) { view, windowInsets ->
