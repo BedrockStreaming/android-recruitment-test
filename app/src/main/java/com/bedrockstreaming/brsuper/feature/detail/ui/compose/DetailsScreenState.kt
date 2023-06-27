@@ -9,7 +9,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.bedrockstreaming.brsuper.feature.common.Loader
-import com.bedrockstreaming.brsuper.feature.detail.ui.DetailsViewModel
+import com.bedrockstreaming.brsuper.feature.detail.viewmodel.DetailsViewModel
 import org.koin.androidx.compose.koinViewModel
 
 @Composable

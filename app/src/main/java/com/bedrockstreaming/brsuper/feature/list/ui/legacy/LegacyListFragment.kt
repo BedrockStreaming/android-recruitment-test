@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bedrockstreaming.brsuper.databinding.FragmentLegacyListBinding
-import com.bedrockstreaming.brsuper.feature.list.ui.ListViewModel
+import com.bedrockstreaming.brsuper.feature.list.viewmodel.ListViewModel
 import com.bedrockstreaming.brsuper.feature.navigation.ui.legacy.navigator
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.coroutines.launch

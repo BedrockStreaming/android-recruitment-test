@@ -10,7 +10,7 @@ import com.bedrockstreaming.brsuper.R
 import com.bedrockstreaming.brsuper.databinding.FragmentLegacyHomeBinding
 import com.bedrockstreaming.brsuper.feature.detail.ui.legacy.LegacyDetailsFragment
 import com.bedrockstreaming.brsuper.feature.list.ui.legacy.LegacyListFragment
-import com.bedrockstreaming.brsuper.feature.navigation.ui.MainNavigationViewModel
+import com.bedrockstreaming.brsuper.feature.navigation.viewmodel.MainNavigationViewModel
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

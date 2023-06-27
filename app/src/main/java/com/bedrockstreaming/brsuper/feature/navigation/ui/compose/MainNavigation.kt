@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import com.bedrockstreaming.brsuper.feature.common.Empty
 import com.bedrockstreaming.brsuper.feature.detail.ui.compose.DetailsScreen
 import com.bedrockstreaming.brsuper.feature.list.ui.compose.ListScreen
-import com.bedrockstreaming.brsuper.feature.navigation.ui.MainNavigationViewModel
+import com.bedrockstreaming.brsuper.feature.navigation.viewmodel.MainNavigationViewModel
 import com.microsoft.device.dualscreen.twopanelayout.TwoPaneLayout
 import org.koin.androidx.compose.koinViewModel
 

@@ -9,7 +9,7 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.bedrockstreaming.brsuper.databinding.FragmentLegacyDetailsBinding
-import com.bedrockstreaming.brsuper.feature.detail.ui.DetailsViewModel
+import com.bedrockstreaming.brsuper.feature.detail.viewmodel.DetailsViewModel
 import com.bedrockstreaming.brsuper.feature.navigation.ui.legacy.navigator
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel

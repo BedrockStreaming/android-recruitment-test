@@ -10,7 +10,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import com.bedrockstreaming.brsuper.feature.common.Loader
-import com.bedrockstreaming.brsuper.feature.list.ui.ListViewModel
+import com.bedrockstreaming.brsuper.feature.list.viewmodel.ListViewModel
 import org.koin.androidx.compose.koinViewModel
 
 @Composable

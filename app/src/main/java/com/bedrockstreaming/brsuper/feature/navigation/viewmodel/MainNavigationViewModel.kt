@@ -1,4 +1,4 @@
-package com.bedrockstreaming.brsuper.feature.navigation.ui
+package com.bedrockstreaming.brsuper.feature.navigation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

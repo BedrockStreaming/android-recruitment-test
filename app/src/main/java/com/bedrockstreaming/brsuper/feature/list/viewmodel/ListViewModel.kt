@@ -1,4 +1,4 @@
-package com.bedrockstreaming.brsuper.feature.list.ui
+package com.bedrockstreaming.brsuper.feature.list.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
