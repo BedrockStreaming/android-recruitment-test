@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class HeroListViewModel(
+class ListViewModel(
     private val getHeroList: GetHeroListUseCase,
 ) : ViewModel() {
 

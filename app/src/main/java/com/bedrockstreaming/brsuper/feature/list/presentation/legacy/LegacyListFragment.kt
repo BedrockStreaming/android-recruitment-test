@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bedrockstreaming.brsuper.databinding.FragmentLegacyListBinding
-import com.bedrockstreaming.brsuper.feature.list.presentation.HeroListViewModel
+import com.bedrockstreaming.brsuper.feature.list.presentation.ListViewModel
 import com.bedrockstreaming.brsuper.feature.navigation.presentation.legacy.navigator
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.coroutines.launch
@@ -21,7 +21,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LegacyListFragment : Fragment() {
 
-    private val viewModel: HeroListViewModel by viewModel()
+    private val viewModel: ListViewModel by viewModel()
 
     private var binding: FragmentLegacyListBinding? = null
 
@@ -35,14 +35,14 @@ class LegacyListFragment : Fragment() {
         lifecycleScope.launch {
             viewModel.state.collect { state ->
                 when (state) {
-                    is HeroListViewModel.State.Loading -> {
+                    is ListViewModel.State.Loading -> {
                         binding?.apply {
                             progressIndicatorList.isVisible = true
                             recyclerViewList.isVisible = false
                         }
                     }
 
-                    is HeroListViewModel.State.Content -> {
+                    is ListViewModel.State.Content -> {
                         binding?.apply {
                             (recyclerViewList.adapter as? LegacyListAdapter)?.submitList(state.filteredHeroes)
 

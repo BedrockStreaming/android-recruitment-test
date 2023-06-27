@@ -14,7 +14,7 @@ import com.bedrockstreaming.brsuper.feature.navigation.presentation.MainNavigati
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class LegacyHomeFragment : Fragment(), LegacyNavigator {
+class LegacyNavigationFragment : Fragment(), LegacyNavigator {
 
     private val viewModel: MainNavigationViewModel by viewModel()
 

@@ -10,13 +10,13 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import com.bedrockstreaming.brsuper.Loader
-import com.bedrockstreaming.brsuper.feature.list.presentation.HeroListViewModel
+import com.bedrockstreaming.brsuper.feature.list.presentation.ListViewModel
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun ListScreenState(
     modifier: Modifier,
-    viewModel: HeroListViewModel = koinViewModel(),
+    viewModel: ListViewModel = koinViewModel(),
     listState: LazyListState = rememberLazyListState(),
     onItemClick: (String) -> Unit = {},
     insets: PaddingValues = PaddingValues(),
@@ -28,13 +28,13 @@ fun ListScreenState(
     }
 
     when (val currentState = state) {
-        is HeroListViewModel.State.Loading -> {
+        is ListViewModel.State.Loading -> {
             Loader(
                 modifier = modifier.padding(insets)
             )
         }
 
-        is HeroListViewModel.State.Content -> {
+        is ListViewModel.State.Content -> {
             ListScreenContents(
                 modifier = modifier,
                 heroes = currentState.filteredHeroes,
