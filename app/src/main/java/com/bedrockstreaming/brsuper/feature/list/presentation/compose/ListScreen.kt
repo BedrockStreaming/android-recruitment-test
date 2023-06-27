@@ -29,7 +29,7 @@ fun ListScreen(
                         listState.animateScrollToItem(index = 0)
                     }
                 },
-                title = { Text("Heroes") }
+                title = { Text("Compose Heroes") }
             )
         }
     ) { insets ->

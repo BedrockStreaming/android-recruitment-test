@@ -15,7 +15,7 @@
             android:id="@+id/topAppBar_list"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:title="Heroes" />
+            app:title="Legacy Heroes" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout_list_search"
